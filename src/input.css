@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.nav-toggle {
+  @apply bg-black w-[30px] h-[2px] block my-2 group-hover:bg-lime-700 transition;
+}
+.nav-active span:nth-child(1) {
+  @apply rotate-45;
+}
+.nav-active span:nth-child(2) {
+  @apply -translate-x-20 animate-wush;
+}
+.nav-active span:nth-child(3) {
+  @apply -rotate-45;
+}
+.navbar-scroll {
+  /* @apply fixed backdrop-blur-lg; */
+  box-shadow: inset 0px -2px 0 0 rgba(0, 0, 0, 0.1);
+}
+.hover-navbar {
+  @apply hover:text-lime-500 transition relative;
+}
+.nav-active ~ nav ul {
+  @apply right-0;
+}
+.nav-active ~ nav ul li {
+  @apply right-[40rem] animate-listItemShow;
+}
+.nav-active ~ nav ul li:nth-child(1) {
+  animation-delay: 0ms;
+}
+.nav-active ~ nav ul li:nth-child(2) {
+  animation-delay: 100ms;
+}
+.nav-active ~ nav ul li:nth-child(3) {
+  animation-delay: 200ms;
+}
+.nav-active ~ nav ul li:nth-child(4) {
+  animation-delay: 300ms;
+}
+.nav-item {
+  @apply py-3 relative lg:static flex justify-center transition;
+}
+nav ul li a::before {
+  content: '';
+  @apply absolute -bottom-[2px] w-full h-[2px] bg-lime-500 scale-x-0 transition duration-300 origin-right;
+}
+nav ul li a:hover::before {
+  @apply scale-100 origin-left;
+}
+.active {
+  @apply text-lime-500;
+}
+.search-box {
+  @apply focus:border-lime-600 lg:relative hidden lg:block rounded-3xl py-1.5 pl-1.5 focus:outline-none;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-active {
+  @apply w-52 pr-11 block border-2 border-lime-500 opacity-100;
+}
+.search-active ~ .cancel-button {
+  @apply hidden lg:flex relative;
+}
+.search-button {
+  @apply lg:absolute bg-lime-400 p-2 lg:right-2 cursor-pointer rounded-full flex justify-center items-center hover:bg-lime-500;
+}
+.typing-text h2 {
+  @apply uppercase;
+}
+@keyframes wush {
+  0% {
+    @apply opacity-100;
+  }
+  100% {
+    @apply opacity-0;
+  }
+}
+@keyframes listItemShow {
+  0% {
+    @apply right-[40rem];
+  }
+  100% {
+    @apply right-0;
+  }
+}
