@@ -708,6 +708,14 @@ video {
   height: 0.25rem;
 }
 
+.h-4\/5 {
+  height: 80%;
+}
+
+.h-4\/6 {
+  height: 66.666667%;
+}
+
 .max-h-screen {
   max-height: 100vh;
 }
@@ -893,6 +901,10 @@ video {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.bg-slate-600\/80 {
+  background-color: rgb(71 85 105 / 0.8);
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -903,6 +915,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
 }
 
 .p-2 {
@@ -967,6 +983,26 @@ video {
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pb-9 {
+  padding-bottom: 2.25rem;
+}
+
+.pb-32 {
+  padding-bottom: 8rem;
+}
+
+.pb-40 {
+  padding-bottom: 10rem;
+}
+
+.pb-52 {
+  padding-bottom: 13rem;
 }
 
 .text-center {
@@ -1080,6 +1116,16 @@ video {
 .text-lime-500 {
   --tw-text-opacity: 1;
   color: rgb(132 204 22 / var(--tw-text-opacity));
+}
+
+.text-amber-500 {
+  --tw-text-opacity: 1;
+  color: rgb(245 158 11 / var(--tw-text-opacity));
+}
+
+.text-yellow-400 {
+  --tw-text-opacity: 1;
+  color: rgb(250 204 21 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -1628,6 +1674,14 @@ nav ul li a:hover::before {
 
   .lg\:h-full {
     height: 100%;
+  }
+
+  .lg\:h-screen {
+    height: 100vh;
+  }
+
+  .lg\:h-4\/5 {
+    height: 80%;
   }
 
   .lg\:w-full {
