@@ -189,3 +189,14 @@ nav ul li a:hover::before {
   opacity: 1;
   transition-delay: 0.2s;
 }
+@media (max-width: 767px) {
+  .tokoh-card .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  .tokoh-card {
+    height: 320px;
+  }
+}
