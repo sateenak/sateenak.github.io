@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       poppins: ['Poppins'],
+      latin: ['Kaushan Script'],
     },
     extend: {
       animation: {

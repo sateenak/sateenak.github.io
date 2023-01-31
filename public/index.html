@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,10 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
+    <link rel="stylesheet" href="./assets/libs/slider/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/slider.css">
   </head>
   <body class="font-poppins">
+    <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
+      <span class="loader lg:scale-150"></span>
+    </div>
     <input type="text" class="absolute -z-50" autofocus />
     <div class="bg-lime-500 hidden lg:block" id="announce">
       <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
@@ -44,11 +51,11 @@
         </div>
       </div>
     </div>
-    <header class="sticky top-0 left-0 transition z-40 w-full flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
+    <header class="sticky top-0 left-0 transition z-40 w-full border-b flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
       <div class="w-full relative">
         <div class="relative flex justify-between items-center py-2 px-5">
           <div class="px-8">
-            <a href="./index.html"><img src="./assets/img/logo.png" width="55" height="55" class="block" alt="" /></a>
+            <a href="./index.html"><img src="./assets/img/politama-logo.png" width="55" height="55" class="block" alt="" /></a>
           </div>
           <div class="flex items-center">
             <button class="absolute block right-5 nav-button z-50 px-8 group lg:hidden" title="Navbar">
@@ -60,7 +67,7 @@
               <ul class="text-base lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-widest text-gray-900">
                 <li class="nav-item"><a href="./index.html" class="hover-navbar active">HOME</a></li>
                 <li class="nav-item"><a href="./blog.html" class="hover-navbar">BLOG</a></li>
-                <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM KEAHLIAN</a></li>
+                <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
                 <li class="nav-item"><a href="./about.html" class="hover-navbar">ABOUT</a></li>
                 <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
                   <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
@@ -77,21 +84,92 @@
         </div>
       </div>
     </header>
-    <section class="bg-white pt-10 container mx-auto border-b border-lime-400">
-      <div class="text-center">
-        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold"><span class="typing-text text-slate-700"></span>Bersama</h2>
-        <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-500 font-black mb-10">POLITAMA</h1>
-        <p class="text-slate-900 mb-10 px-7 lg:px-32">
-          Taman Siswa adalah nama sekolah yang didirikan oleh Ki Hadjar Dewantara pada tanggal 3 Juli tahun 1922 (Taman berarti tempat bermain atau tempat belajar, dan Siswa berarti murid). Taman Siswa selalu menekankan prinsip nasionalisme
-          dan kemerdekaan dalam pelaksanaan pendidikannya
-        </p>
-        <a href="#sejarah" class="bg-lime-500 text-white font-medium p-3 inline-block rounded-full hover:bg-white hover:border-2 hover:border-lime-400 hover:text-lime-600 transition mb-9">Baca Selengkapnya</a>
+    <section class="pt-10 border-b h-screen max-h-screen bg-center overflow-hidden hover:bg-slate-600 bg-slate-500 transition bg-fixed bg-cover bg-blend-darken" style="background-image: url(./assets/img/gedung.jpg)">
+      <div class="text-center container mx-auto">
+        <div data-aos="fade-right" data-aos-delay="550">
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text text-slate-300"></span>Bersama</h2>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-400 font-black mb-10">POLITAMA</h1>
+        </div>
+        <p class="text-white mb-10 px-7 text-lg lg:px-32 lg:text-xl" data-aos="fade-left" data-aos-delay="550">
+          <span class="text-yellow-500 font-semibold">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.
+          </p>
+          <a href="#sejarah" class="text-white"><i class="fas fa-arrow-down fa-2xl mt-10 animate-bounce"></i></a>
+        <!-- <a href="#sejarah" class="bg-lime-500 text-white font-medium p-3 inline-block rounded-full border-2 border-lime-500 hover:border-lime-600 hover:bg-lime-600  transition mb-9 box-border"
+          >Scroll Down</a
+        > -->
       </div>
     </section>
-    <section class="h-screen"></section>
+    <section id="sejarah" class="h-full relative w-full p-2 pt-20 md:mb-28 bg-cover bg-center" style="background-image: url(./assets/img/section1.jpg);">
+      <p class="text-lime-600 text-center text-lg font-latin">Kenalilah Kami</p>
+      <h1 class="text-center text-4xl font-extrabold tracking-wider mb-9">Sejarah Tamansiswa</h1>
+      <div class="blog-slider" id="historical-card" data-aos="zoom-in">
+        <div class="blog-slider__wrp swiper-wrapper">
+          <div class="blog-slider__item swiper-slide">
+            <div class="blog-slider__img">
+              <img src="./assets/img/banner.jpg" alt="" />
+            </div>
+            <div class="blog-slider__content">
+              <!-- <div class="blog-slider__title">Lorem Ipsum Dolor</div> -->
+              <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan alternatif yang didirikan oleh Suwardi Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda</div>
+              <a href="./about.html" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-slider__pagination" id="paginate-historical"></div>
+      </div>
+      </div>
+    </section>
+    <section class="h-full w-full container mx-auto" id="tokoh-penting">
+      <div class="">
+        <p class="text-lime-600 text-center text-lg font-latin">Kenalilah Kami</p>
+        <h1 class="text-center text-4xl font-extrabold tracking-wide mb-28">Tokoh Penting</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 place-items-center md:gap-12 gap-24">
+          <div class="tokoh-card">
+            <div class="image">
+              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+            </div>
+            <div class="content">
+              <h3>Ki Hajar Dewantara</h3>
+              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+            </div>
+          </div>
+          <div class="tokoh-card">
+            <div class="image">
+              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+            </div>
+            <div class="content">
+              <h3>Ki Hajar Dewantara</h3>
+              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+            </div>
+          </div>
+          <div class="tokoh-card">
+            <div class="image">
+              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+            </div>
+            <div class="content">
+              <h3>Ki Hajar Dewantara</h3>
+              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+            </div>
+          </div>
+          <div class="tokoh-card">
+            <div class="image">
+              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+            </div>
+            <div class="content">
+              <h3>Ki Hajar Dewantara</h3>
+              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="h-screen w-full"></section>
     <script src="./assets/js/script.js"></script>
     <script src="./icon/fontawesome/js/all.min.js"></script>
     <script src="./assets/libs/typed/typed.js"></script>
+    <script src="./assets/libs/aos/aos.js"></script>
+    <script src="./assets/libs/slider/js/swiper-bundle.min.js"></script>
+    <!-- Typed banner -->
     <script>
       const typed = new Typed('.typing-text', {
         strings: ['Sukses', 'Maju', 'Cerdas'],
@@ -99,6 +177,41 @@
         backSpeed: 300,
         loop: true,
       });
+    </script>
+    <!-- AOS scroll animation  -->
+    <script>
+      AOS.init();
+      AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 120, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 400, // values from 0 to 3000, with step 50ms
+        easing: 'ease', // default easing for AOS animations
+        once: false, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+      });
+    </script>
+    <!-- Slider Swiper -->
+    <script>
+    let historical = new Swiper('#historical-card', {
+      spaceBetween: 30,
+      effect: 'fade',
+      pagination: {
+        el: '#paginate-historical',
+        clickable: true,
+      }
+    });
     </script>
   </body>
 </html>

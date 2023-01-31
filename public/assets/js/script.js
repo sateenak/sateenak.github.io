@@ -1,4 +1,8 @@
 window.addEventListener('load', function () {
+  const loader = document.querySelector('.block-load');
+  setTimeout(() => {
+    loader.classList.add('hidden');
+  }, 400);
   // nav 3 lines animation
   const nav_button = document.querySelector('.nav-button');
   const nav = document.querySelector('nav');
