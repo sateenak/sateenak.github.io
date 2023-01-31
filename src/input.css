@@ -200,3 +200,37 @@ nav ul li a:hover::before {
     height: 320px;
   }
 }
+/* Flip book animation for visi misi */
+.box-vimi {
+  @apply relative w-[320px] sm:w-[330px] md:w-[350px] lg:w-[450px] xl:w-[550px] p-10 bg-white shadow-xl overflow-hidden m-5 box-border rounded-lg transition;
+}
+.box-vimi::before {
+  content: '';
+  @apply w-1/2 h-full absolute top-0 left-0 bg-white/20 z-[2];
+}
+.box-vimi .icon {
+  @apply relative w-20 h-20 text-white bg-lime-600 rounded-full flex justify-center items-center m-auto transition duration-500;
+}
+.box-vimi:nth-child(1) .icon {
+  @apply bg-teal-500;
+  box-shadow: 0 0 0 0 rgb(20 184 166 / 1);
+}
+.box-vimi:nth-child(1):hover .icon {
+  box-shadow: 0 0 0 400px rgb(20 184 166 / 1);
+}
+.box-vimi:nth-child(2) .icon {
+  @apply bg-pink-500;
+  box-shadow: 0 0 0 0 rgb(236 72 153);
+}
+.box-vimi:nth-child(2):hover .icon {
+  box-shadow: 0 0 0 400px rgb(236 72 153);
+}
+.box-vimi:hover .content {
+  @apply z-10 relative transition;
+}
+.box-vimi:hover .content h3 {
+  @apply text-white my-0 p-0;
+}
+.box-vimi:hover .content p {
+  @apply text-white m-0 my-0 p-0;
+}
