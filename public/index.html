@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./assets/libs/slider/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/slider.css">
   </head>
-  <body class="font-poppins">
+  <body class="font-poppins body-flex">
     <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
       <span class="loader lg:scale-150"></span>
     </div>
@@ -64,9 +64,9 @@
               <span class="nav-toggle transition duration-300 origin-bottom-left"></span>
             </button>
             <nav class="absolute top-full left-0 w-full h-screen hidden transition bg-white lg:bg-transparent z-40 lg:static lg:block lg:w-full lg:h-full">
-              <ul class="text-base lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-widest text-gray-900">
+              <ul class="text-lg font-normal lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-wider text-gray-900">
                 <li class="nav-item"><a href="./index.html" class="hover-navbar active">HOME</a></li>
-                <li class="nav-item"><a href="./blog.html" class="hover-navbar">BLOG</a></li>
+                <li class="nav-item"><a href="./blog.html" class="hover-navbar">BERITA</a></li>
                 <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
                 <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
                 <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
@@ -87,16 +87,13 @@
     <section class="pt-10 pb-52 max-h-screen bg-center overflow-hidden bg-slate-600 transition bg-fixed bg-cover bg-blend-darken" style="background-image: url(./assets/img/gedung.jpg)">
       <div class="text-center container mx-auto">
         <div data-aos="fade-right" data-aos-delay="550">
-          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text text-sky-500"></span>Bersama</h2>
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text text-slate-200"></span>Bersama</h2>
           <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-500 font-black mb-10">POLITAMA</h1>
         </div>
         <p class="text-white mb-10 px-7 text-lg lg:px-32 lg:text-xl" data-aos="fade-left" data-aos-delay="550">
-          <span class="text-yellow-500 font-semibold">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.
+          <span class="text-yellow-500 font-extralight">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.
           </p>
-          <a href="#sejarah" class="text-white"><i class="fas fa-arrow-down fa-2xl mt-10 animate-bounce"></i></a>
-        <!-- <a href="#sejarah" class="bg-lime-500 text-white font-medium p-3 inline-block rounded-full border-2 border-lime-500 hover:border-lime-600 hover:bg-lime-600  transition mb-9 box-border"
-          >Scroll Down</a
-        > -->
+          <a href="#sejarah" class="text-white"><h2>Scroll Down</h2><i class="fas fa-arrow-down fa-2xl mt-2 animate-bounce"></i></a>
       </div>
     </section>
     <section id="sejarah" class="h-full relative w-full p-2 pt-20 pb-6 bg-cover bg-right-bottom">
@@ -110,8 +107,8 @@
             </div>
             <div class="blog-slider__content">
               <!-- <div class="blog-slider__title">Lorem Ipsum Dolor</div> -->
-              <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan alternatif yang didirikan oleh Suwardi Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda</div>
-              <a href="./#" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
+              <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan yang didirikan oleh Suwardi Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda.</div>
+              <a href="./about.html" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
             </div>
           </div>
         </div>
@@ -126,38 +123,38 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-14 md:gap-y-20" data-aos="fade-up">
           <div class="tokoh-card">
             <div class="image rounded-xl">
-              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+              <img href="#" src="./assets/img/kihajardewantara.jpg">
             </div>
             <div class="content">
               <h3 class="font-bold">Ki Hajar Dewantara</h3>
-              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+              <p>Bangsawan Jawa, pelopor pendidikan dan guru bangsa bagi kaum pribumi di Indonesia. Sekaligus juga pendiri Taman Siswa</p>
             </div>
           </div>
           <div class="tokoh-card">
             <div class="image rounded-xl">
-              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+              <img href="#" src="./assets/img/sutomo.jpg">
             </div>
             <div class="content">
-              <h3 class="font-bold">Ki Hajar Dewantara</h3>
-              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+              <h3 class="font-bold">R.M. Sutomo</h3>
+              <p>Termasuk dalam salah satu pendiri pertama Taman Siswa. Slogan beliau yang terkenal "Belajar adalah harta karun yang akan selalu mengikuti pemiliknya kemanapun juga</p>
             </div>
           </div>
           <div class="tokoh-card">
             <div class="image rounded-xl">
-              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+              <img href="#" src="./assets/img/martanihuseini.jpg">
             </div>
             <div class="content">
-              <h3 class="font-bold">Ki Hajar Dewantara</h3>
-              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+              <h3 class="font-bold">Prof. Dr. Martani Huseini</h3>
+              <p>Lulusan sarjana hingga doktoral di Universitas Indonesia dalam bidang yang linear yaitu Administrasi Publik. Saat ini menjabat sebagai Direktur POLITAMA</p>
             </div>
           </div>
           <div class="tokoh-card">
             <div class="image rounded-xl">
-              <img href="#" src="https://i.pinimg.com/originals/a4/7b/a5/a47ba59b4a353e0928ef0551ca44f980.jpg">
+              <img href="#" src="./assets/img/kisunariadi.jpg">
             </div>
             <div class="content">
-              <h3 class="font-bold">Ki Hajar Dewantara</h3>
-              <p>DIn publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.</p>
+              <h3 class="font-bold">Ki Sunariadi, S, Pd. MM</h3>
+              <p>Saat ini menjabat sebagai salah satu wakil direktur di POLITAMA yaitu Wakil Direktur Akademi</p>
             </div>
           </div>
         </div>
@@ -166,19 +163,26 @@
     <section id="visi-misi" class="py-10 h-full overflow-hidden">
       <p class="text-lime-600/75 text-center text-xl font-latin">Kenalilah Kami</p>
       <h1 class="text-center text-4xl font-extrabold tracking-wide mb-10">Visi & Misi</h1>
-      <div class="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-7 container mx-auto">
-    <div class="box-vimi" data-aos="fade-right">
-      <div class="icon">01</div>
+      <div class="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-6 gap-x-7 container mx-auto">
+    <div class="box-vimi h-full" data-aos="fade-right">
+      <div class="icon"><img src="./assets/img/svg/visi.svg" alt=""></div>
       <div class="content">
         <h3 class="font-extrabold text-xl">Visi</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eaque unde optio quibusdam modi dolores blanditiis alias earum! Aut fugiat modi accusamus facere, necessitatibus distinctio accusantium natus ea laboriosam at.</p>
+        <p>” Menjadi Pusat Pendidikan Dan Pengembangan Vokasi Yang Menghasilkan Tenaga Ahli Yang Berdaya Saing Secara Internasional “</p>
       </div>
     </div>
-    <div class="box-vimi" data-aos="fade-left">
-      <div class="icon">01</div>
+    <div class="box-vimi group h-full" data-aos="fade-left">
+      <div class="icon"><img src="./assets/img/svg/misi.svg" alt=""></div>
       <div class="content">
         <h3 class="font-extrabold text-xl">Misi</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eaque unde optio quibusdam modi dolores blanditiis alias earum! Aut fugiat modi accusamus facere, necessitatibus distinctio accusantium natus ea laboriosam at.</p>
+        <ul class="list-disc group-hover:text-white">
+          <li>Meningkatkan Kualitas Sumber Daya Yang Berpengetahuan , Berkeahlian, Dan Berbudaya</li>
+          <li>Meningkatkan Sinergi Setiap Program Studi Dengan Kebutuhan Lapangan Kerja</li>
+          <li>Meningkatkan Kegiatan Layanan Pada Setiap Program Studi Yang Bermanfaat Bagi Masyarakat</li>
+          <li>Bersinergi Dengan Program Pemerintah / Daerah</li>
+          <li>Meningkatkan Penguatan Kerjasama Dalam Mendukung Keberlanjutan  Pemanfaatan Sumber Daya Manusia Terampil</li>
+          <li>Mewujudkan Tata Kelola Perguruan Tinggi Yang Baik</li>
+        </ul>
       </div>
     </div>
       </div>

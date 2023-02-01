@@ -7,12 +7,13 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
+    <link rel="stylesheet" href="./assets/libs/modal/sweetalert.min.css">
   </head>
-  <body>
+  <body class="font-poppins body-flex">
     <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
       <span class="loader lg:scale-150"></span>
     </div>
@@ -61,11 +62,11 @@
               <span class="nav-toggle transition duration-300 origin-bottom-left"></span>
             </button>
             <nav class="absolute top-full left-0 w-full h-screen hidden transition bg-white lg:bg-transparent z-40 lg:static lg:block lg:w-full lg:h-full">
-              <ul class="text-base lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-widest text-gray-900">
+              <ul class="text-lg font-normal lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-wider text-gray-900">
                 <li class="nav-item"><a href="./index.html" class="hover-navbar">HOME</a></li>
-                <li class="nav-item"><a href="./blog.html" class="hover-navbar">BLOG</a></li>
+                <li class="nav-item"><a href="./blog.html" class="hover-navbar">BERITA</a></li>
                 <li class="nav-item"><a href="./prodi.html" class="hover-navbar active">PROGRAM STUDI</a></li>
-                <li class="nav-item"><a href="./about.html" class="hover-navbar">ABOUT</a></li>
+                <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
                 <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
                   <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
                   <div class="search-button">
@@ -82,18 +83,105 @@
       </div>
     </header>
 
+    <section class="min-h-screen py-6 px-5">
+      <div class="container mx-auto flex md:justify-center justify-center lg:justify-around flex-wrap px-4 gap-y-5">
+        <div class="card-prodi">
+          <div class="img-box" data-text="Listrik">
+            <img src="./assets/img/prodi/electric.png" class="w-32 h-32" alt="">
+          </div>
+          <div class="content">
+            <div>
+              <h1>Teknik Listrik</h1>
+            <p>
+              <ul class="list-item list-disc ml-5">
+                <li>Designer-Electrical Supervisor</li>
+                <li>Inspection and commisioning-Electrical Supervisor</li>
+                <li>Maintenance-Electrical Supervisor</li>
+                <li>Operation-Electrical Supervisor</li>
+              </ul>
+            </p>
+            <a href="#" id="teknik-listrik">Baca Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-prodi">
+          <div class="img-box" data-text="Mesin">
+            <img src="./assets/img/prodi/machine.png" class="w-32 h-32" alt="">
+          </div>
+          <div class="content">
+           <div>
+            <h1>Teknik Mesin</h1>
+            <p>
+              <ul class="list-item list-disc ml-5">
+                <li>Supervisor Engineering/Engineering</li>
+                <li>Teknisi/Instruktur</li>
+              </ul>
+            </p>
+            <a href="#" id="teknik-mesin">Baca Selengkapnya</a>
+           </div>
+          </div>
+        </div>
+        <div class="card-prodi">
+          <div class="img-box" data-text="Komputer">
+            <img src="./assets/img/prodi/computer.png" class="w-32 h-32" alt="">
+          </div>
+          <div class="content">
+           <div>
+            <h1>Teknik Komputer</h1>
+            <p>
+              <ul class="list-item list-disc ml-5">
+                <li>Network and Computer System Administrator</li>
+                <li>IoT Developer</li>
+              </ul>
+            </p>
+            <a href="#" id="teknik-komputer">Baca Selengkapnya</a>
+           </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+    </section>
+    <footer id="footer" class="bg-black text-white gap-y-14">
+      <div class="lg:flex lg:items-center block container mx-auto">
+        <div class="informasi-umum lg:w-1/2 p-10 relative">
+          <h1 class="text-5xl title-footer relative text-lime-600 font-black">Politama</h1>
+          <p class="mt-10">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.</p>
+          <div class="address">
+            <div class="mt-5 mb-2"><i class="fas fa-location-dot mr-3 text-lime-500"></i>Jalan Tamansiswa N0. 30 Kota Mojokerto Jawa Timur 61311</div>
+            <div class="mb-2"><i class="fas fa-envelope mr-3 text-lime-500"></i>info@politekniktamansiswa-mjk.ac.id</div>
+            <div class="mb-2"><i class="fas fa-phone mr-3 text-lime-500"></i>032 1322 937</div>
+          </div>
+        </div>
+        <div class="map-politama lg:w-1/2 p-10">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.992193814054!2d112.4388628!3d-7.4654652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d8d3b31db45%3A0xdeec8da4b0616663!2sPoliteknik%20Internasional%20Tamansiswa%20Mojokerto!5e0!3m2!1sid!2sid!4v1675221638579!5m2!1sid!2sid" style="border:0;" class="mt-6 h-80 w-full lg:w-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div class="container pt-9 mx-auto">
+        <div class="flex justify-center mb-9">
+          <a href="#" class="mr-9 text-white">
+           <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="mr-9 text-white">
+            <i class="fa-brands fa-facebook"></i>
+           </a>
+           <a href="#" class="mr-9 text-white">
+            <i class="fa-brands fa-twitter"></i>
+           </a>
+        </div>
+      </div>
+      <div class="text-center bg-slate-800 p-3">
+        Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All Rights Reserved 
+      </div>
+    </footer>
+
+    <!-- Modal Prodi -->
+    
+    <!-- </Modal Prodi> -->
     <script src="./assets/js/script.js"></script>
     <script src="./icon/fontawesome/js/all.min.js"></script>
-    <script src="./assets/libs/typed/typed.js"></script>
     <script src="./assets/libs/aos/aos.js"></script>
-    <script>
-      const typed = new Typed('.typing-text', {
-        strings: ['Sukses', 'Maju', 'Cerdas'],
-        typeSpeed: 300,
-        backSpeed: 300,
-        loop: true,
-      });
-    </script>
+    <script src="./assets/libs/modal/sweetalert.min.js"></script>
     <script>
       AOS.init();
       AOS.init({
@@ -116,6 +204,124 @@
         mirror: false, // whether elements should animate out while scrolling past them
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
       });
+    </script>
+    <script>
+      const teknik_mesin = document.getElementById('teknik-mesin')
+      const teknik_listrik = document.getElementById('teknik-listrik')
+      const teknik_komputer = document.getElementById('teknik-komputer')
+      teknik_listrik.addEventListener('click', function () {
+        Swal.fire({
+          title: 'Teknik Listrik',
+          html: `<div class="text-left">
+                  <div class="flex justify-center">
+                  <div class="mb-10 bg-lime-500 text-white p-5 rounded-lg">
+                    <h1 class="text-xl font-semibold">Profil Lulusan:</h1>
+                    <ul class="list-item list-disc ml-5 items-start">
+                      <li>Designer-Electrical Supervisor</li>
+                      <li>Inspection and commisioning-Electrical Supervisor</li>
+                      <li>Maintenance-Electrical Supervisor</li>
+                      <li>Operation-Electrical Supervisor</li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                    <div class="h-full rounded-lg shadow-lg p-4 bg-yellow-500 text-white mb-10">
+                      <h1 class="text-xl font-semibold">Visi:</h1>
+                      <p>Menjadi program studi yang menghasilkan tenaga ahli di bidang ketenagalistrikan yang unggul dan inovatif serta mampu mengembangkan ilmu pengetahuan dan teknologi yang berbasis riset terapan</p>
+                    </div>
+                    <div class="h-full rounded-lg shadow-lg bg-yellow-500 text-white p-4">
+                      <h1 class="text-xl font-semibold">Misi:</h1>
+                      <ul class="list-item list-disc ml-5">
+                        <li>Menyelenggarakan pendidikan dan pembelajaran yang berkualitas di bidang 
+                          ketenagalistrikan berbasis riset terapan.</li>
+                        <li>Menyelenggarakan penelitian yang inovatif dibidang ketenagalistrikan untuk 
+                          kemajuan ilmu pengetahuan dan teknologi.</li>
+                        <li>Menyelenggarakan pengabdian kepada masyarakat dibidang ketenagalistrikan yang 
+                          berbasis riset terapan.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>`,
+          confirmButtonText: 'Tutup',
+          grow:'fullscreen'
+        })
+      })
+      teknik_mesin.addEventListener('click', function(){
+        Swal.fire({
+          title: 'Teknik Mesin',
+          html: `<div class="text-left">
+                  <div class="flex justify-center">
+                  <div class="mb-10 bg-lime-500 text-white p-5 rounded-lg">
+                    <h1 class="text-xl font-semibold">Profil Lulusan:</h1>
+                    <ul class="list-item list-disc ml-5 items-start">
+                      <li>Supervisor Engineering/Engineering</li>
+                      <li>Teknisi/Instruktur</li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                    <div class="h-full rounded-lg shadow-lg p-4 bg-sky-500 text-white mb-10">
+                      <h1 class="text-xl font-semibold">Visi:</h1>
+                      <p>Mewujudkan Program Studi D-III Teknik Mesin yang mampu bersaing, inovatif dan 
+                        adaptif terhadap perkembangan ilmu pengetahuan dan teknologi di bidang teknik mesin 
+                        yang berbasis riset terapan serta kewirausahaan</p>
+                    </div>
+                    <div class="h-full rounded-lg shadow-lg bg-sky-500 text-white p-4">
+                      <h1 class="text-xl font-semibold">Misi:</h1>
+                      <ul class="list-item list-disc ml-5">
+                        <li>Menyelenggarakan pendidikan dan pembelajaran yang berkualitas dan 
+                          meningkatnya mutu pendidikan sesuai dengan bidang keahlian teknik mesin, dan 
+                          bidang sektor industri, melalui riset terapan dengan memiliki jiwa wirausaha.</li>
+                        <li>Menyelenggarakan penelitian dibidang teknik mesin dan bidang bidang sektor 
+                          industri untuk kemajuan / keunggulan Iptek.</li>
+                        <li>Menyelenggarakan pengabdian kepada masyarakat yang berbasis riset terapan 
+                          untuk meningkatkan kesejahteraan masyarakat baik ditingkat regional dan nasional.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>`,
+          confirmButtonText: 'Tutup',
+          grow:'fullscreen'
+        })
+      })
+      teknik_komputer.addEventListener('click', function(){
+        Swal.fire({
+          title: 'Teknik Komputer',
+          html: `<div class="text-left">
+                  <div class="flex justify-center">
+                  <div class="mb-10 bg-lime-500 text-white p-5 rounded-lg">
+                    <h1 class="text-xl font-semibold">Profil Lulusan:</h1>
+                    <ul class="list-item list-disc ml-5 items-start">
+                      <li>Network and Computer System Administrator</li>
+                      <li>IoT Developer</li>
+                    </ul>
+                  </div>
+                  </div>
+                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                    <div class="h-full rounded-lg shadow-lg p-4 bg-pink-600 text-white mb-10">
+                      <h1 class="text-xl font-semibold">Visi:</h1>
+                      <p>Menjadi program studi yang unggul, inovatif, berwawasan global, bereputasi 
+                        internasional dan kreatif dalam bidang teknologi komputer.
+                        </p>
+                    </div>
+                    <div class="h-full rounded-lg shadow-lg bg-pink-600 text-white p-4">
+                      <h1 class="text-xl font-semibold">Misi:</h1>
+                      <ul class="list-item list-disc ml-5">
+                        <li>Menyelenggarakan pendidikan yang berorientasi dan berinovasi pada kebutuhan 
+                          masyarakat serta bereputasi internasional.</li>
+                        <li>Mengembangkan penelitian yang terkini dan inovatif dalam bidang teknologi 
+                          komputer termasuk didalamnya adalah pengembangan riset Jaringan Komputer, 
+                          Internet of Things dan Data Science.</li>
+                        <li>Menghasilkan lulusan yang siap kerja, professional, kreatif serta menguasai 
+                          teknologi masa depan di bidang teknologi komputer.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>`,
+          confirmButtonText: 'Tutup',
+          grow:'fullscreen'
+        })
+      })
     </script>
   </body>
 </html>
