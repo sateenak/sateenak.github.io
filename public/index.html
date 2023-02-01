@@ -68,7 +68,7 @@
                 <li class="nav-item"><a href="./index.html" class="hover-navbar active">HOME</a></li>
                 <li class="nav-item"><a href="./blog.html" class="hover-navbar">BLOG</a></li>
                 <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
-                <li class="nav-item"><a href="./about.html" class="hover-navbar">ABOUT</a></li>
+                <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
                 <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
                   <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
                   <div class="search-button">
@@ -84,11 +84,11 @@
         </div>
       </div>
     </header>
-    <section class="pt-10 pb-52 max-h-screen bg-center overflow-hidden hover:bg-slate-600 bg-slate-600/80 transition bg-fixed bg-cover bg-blend-darken" style="background-image: url(./assets/img/gedung.jpg)">
+    <section class="pt-10 pb-52 max-h-screen bg-center overflow-hidden bg-slate-600 transition bg-fixed bg-cover bg-blend-darken" style="background-image: url(./assets/img/gedung.jpg)">
       <div class="text-center container mx-auto">
         <div data-aos="fade-right" data-aos-delay="550">
-          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text"></span>Bersama</h2>
-          <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-400 font-black mb-10">POLITAMA</h1>
+          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text text-sky-500"></span>Bersama</h2>
+          <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-500 font-black mb-10">POLITAMA</h1>
         </div>
         <p class="text-white mb-10 px-7 text-lg lg:px-32 lg:text-xl" data-aos="fade-left" data-aos-delay="550">
           <span class="text-yellow-500 font-semibold">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.
@@ -99,7 +99,7 @@
         > -->
       </div>
     </section>
-    <section id="sejarah" class="h-full relative w-full p-2 pt-20 pb-6 bg-cover bg-right-bottom" style="background-image: url(assets/img/section2.jpg);">
+    <section id="sejarah" class="h-full relative w-full p-2 pt-20 pb-6 bg-cover bg-right-bottom">
       <p class="text-lime-600 text-center text-xl font-latin">Kenalilah Kami</p>
       <h1 class="text-center text-4xl font-extrabold tracking-wider mb-9">Sejarah Tamansiswa</h1>
       <div class="blog-slider" id="historical-card" data-aos="fade-up">
@@ -111,7 +111,7 @@
             <div class="blog-slider__content">
               <!-- <div class="blog-slider__title">Lorem Ipsum Dolor</div> -->
               <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan alternatif yang didirikan oleh Suwardi Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda</div>
-              <a href="./about.html" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
+              <a href="./#" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
             </div>
           </div>
         </div>
@@ -119,7 +119,7 @@
       </div>
       </div>
     </section>
-    <section class="h-full w-full bg-cover bg-center p-10 md:pt-24" id="tokoh-penting" style="background-image: url(./assets/img/section1.jpg);">
+    <section class="h-full w-full bg-cover bg-center p-10 md:pt-24" id="tokoh-penting">
       <div class="container mx-auto">
         <p class="text-lime-600 text-center text-xl font-latin">Kenalilah Kami</p>
         <h1 class="text-center text-4xl font-extrabold tracking-wide mb-28">Tokoh Penting</h1>
@@ -163,9 +163,9 @@
         </div>
       </div>
     </section>
-    <section id="visi-misi" class="py-10 h-full">
-      <p class="text-lime-600 text-center text-xl font-latin">Kenalilah Kami</p>
-      <h1 class="text-center text-4xl font-extrabold tracking-wide mb-28">Visi & Misi</h1>
+    <section id="visi-misi" class="py-10 h-full overflow-hidden">
+      <p class="text-lime-600/75 text-center text-xl font-latin">Kenalilah Kami</p>
+      <h1 class="text-center text-4xl font-extrabold tracking-wide mb-10">Visi & Misi</h1>
       <div class="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-x-7 container mx-auto">
     <div class="box-vimi" data-aos="fade-right">
       <div class="icon">01</div>
@@ -183,21 +183,35 @@
     </div>
       </div>
     </section>
-    <footer>
+    <footer id="footer" class="bg-black text-white">
+      <div class="lg:flex lg:items-center block container mx-auto">
+        <div class="informasi-umum lg:w-1/2 p-10 relative">
+          <h1 class="text-5xl title-footer relative text-lime-600 font-black">Politama</h1>
+          <p class="mt-10">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.</p>
+          <div class="address">
+            <div class="mt-5 mb-2"><i class="fas fa-location-dot mr-3 text-lime-500"></i>Jalan Tamansiswa N0. 30 Kota Mojokerto Jawa Timur 61311</div>
+            <div class="mb-2"><i class="fas fa-envelope mr-3 text-lime-500"></i>info@politekniktamansiswa-mjk.ac.id</div>
+            <div class="mb-2"><i class="fas fa-phone mr-3 text-lime-500"></i>032 1322 937</div>
+          </div>
+        </div>
+        <div class="map-politama lg:w-1/2 p-10">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.992193814054!2d112.4388628!3d-7.4654652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d8d3b31db45%3A0xdeec8da4b0616663!2sPoliteknik%20Internasional%20Tamansiswa%20Mojokerto!5e0!3m2!1sid!2sid!4v1675221638579!5m2!1sid!2sid" style="border:0;" class="mt-6 h-80 w-full lg:w-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
       <div class="container pt-9 mx-auto">
         <div class="flex justify-center mb-9">
-          <a href="#" class="mr-9 text-gray-800">
+          <a href="#" class="mr-9 text-white">
            <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" class="mr-9 text-gray-800">
+          <a href="#" class="mr-9 text-white">
             <i class="fa-brands fa-facebook"></i>
            </a>
-           <a href="#" class="mr-9 text-gray-800">
+           <a href="#" class="mr-9 text-white">
             <i class="fa-brands fa-twitter"></i>
            </a>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center bg-slate-800 p-3">
         Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All Rights Reserved 
       </div>
     </footer>
