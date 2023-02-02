@@ -7,6 +7,7 @@ module.exports = {
       latin: ['Kaushan Script'],
       itim: ['Itim'],
       opensans: ['Open Sans'],
+      montserrat: ['Montserrat'],
     },
     extend: {
       animation: {

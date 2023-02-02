@@ -1,271 +1,303 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>POLITAMA | Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/tailwind.css" />
-    <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
-    <link rel="stylesheet" href="./assets/libs/slider/css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/slider.css">
-  </head>
-  <body class="font-poppins body-flex">
-    <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
-      <span class="loader lg:scale-150"></span>
-    </div>
-    <input type="text" class="absolute -z-50" autofocus />
-    <div class="bg-lime-500 hidden lg:block" id="announce">
-      <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
-        <div class="flex flex-wrap items-center justify-between">
-          <div class="flex w-0 flex-1 items-center">
-            <span class="flex rounded-lg bg-lime-500 p-2">
-              <!-- Heroicon name: outline/megaphone -->
-              <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46"
-                />
-              </svg>
-            </span>
-            <p class="ml-3 truncate font-medium text-white">
-              <span class="md:hidden">Pengumuman!</span>
-              <span class="hidden md:inline">Pendaftaran telah dibuka, silahkan cek lebih lanjut.</span>
-            </p>
-          </div>
-          <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-            <button type="button" id="announce-button" class="-mr-1 flex rounded-md p-2 hover:bg-white hover:rounded-full transition hover:text-lime-500 group focus:outline-none focus:ring-2 sm:-mr-2">
-              <span class="sr-only">Dismiss</span>
-              <!-- Heroicon name: outline/x-mark -->
-              <svg class="h-6 w-6 text-white group-hover:text-lime-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <header class="sticky top-0 left-0 transition z-40 w-full flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
-      <div class="w-full relative">
-        <div class="relative flex justify-between items-center py-2 px-5">
-          <div class="px-8">
-            <a href="./index.html"><img src="./assets/img/politama-logo.png" width="55" height="55" class="block" alt="" /></a>
-          </div>
-          <div class="flex items-center">
-            <button class="absolute block right-5 nav-button z-50 px-8 group lg:hidden" title="Navbar">
-              <span class="nav-toggle transition duration-300 origin-top-left"></span>
-              <span class="nav-toggle transition duration-300"></span>
-              <span class="nav-toggle transition duration-300 origin-bottom-left"></span>
-            </button>
-            <nav class="absolute top-full left-0 w-full h-screen hidden transition bg-white lg:bg-transparent z-40 lg:static lg:block lg:w-full lg:h-full">
-              <ul class="text-lg font-normal lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-wider text-gray-900">
-                <li class="nav-item"><a href="./index.html" class="hover-navbar active">HOME</a></li>
-                <li class="nav-item"><a href="./blog.html" class="hover-navbar">BERITA</a></li>
-                <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
-                <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
-                <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
-                  <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
-                  <div class="search-button">
-                    <i class="fas fa-search text-white"></i>
-                  </div>
-                  <div class="cancel-button relative cursor-pointer rounded-full hidden justify-center items-center lg:-right-4 -right-4">
-                    <i class="fas fa-times absolute"></i>
-                  </div>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section class="pt-10 pb-52 max-h-screen bg-center overflow-hidden bg-slate-600/80 transition bg-fixed bg-cover bg-blend-darken" style="background-image: url(./assets/img/gedung.jpg)">
-      <div class="text-center container mx-auto mt-12">
-        <div data-aos="fade-right" data-aos-delay="550">
-          <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span class="typing-text text-slate-200"></span>Bersama</h2>
-          <h1 class="text-5xl md:text-7xl lg:text-8xl text-lime-500 font-black mb-10 font-opensans">POLITAMA</h1>
-        </div>
-        <p class="text-white mb-10 px-7 text-lg lg:px-32 lg:text-xl" data-aos="fade-left" data-aos-delay="550">
-          POLITAMA adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.
-          </p>
-          <a href="#sejarah" class="text-white bg-lime-500 py-3 px-4 rounded-full inline-block hover:bg-lime-600"><h2>Lihat Selengkapnya</h2></a>
-      </div>
-    </section>
-    <section id="sejarah" class="h-full relative w-full p-2 pt-20 pb-6 bg-cover bg-right-bottom">
-      <div class="flex justify-center mb-3">
-        <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
-      </div>
-      <h1 class="text-center text-4xl font-extrabold tracking-wider mb-9">Sejarah Tamansiswa</h1>
-      <div class="blog-slider" id="historical-card" data-aos="fade-up">
-        <div class="blog-slider__wrp swiper-wrapper">
-          <div class="blog-slider__item swiper-slide">
-            <div class="blog-slider__img">
-              <img src="./assets/img/banner.jpg" alt="" />
-            </div>
-            <div class="blog-slider__content">
-              <!-- <div class="blog-slider__title">Lorem Ipsum Dolor</div> -->
-              <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan yang didirikan oleh Suwardi Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda.</div>
-              <a href="./about.html" class="blog-slider__button hover:bg-lime-500 transition">SELENGKAPNYA</a>
-            </div>
-          </div>
-        </div>
-        <div class="blog-slider__pagination" id="paginate-historical"></div>
-      </div>
-      </div>
-    </section>
-    <section class="h-full w-full bg-cover bg-center p-10 md:pt-24" id="tokoh-penting">
-      <div class="container mx-auto">
-        <div class="flex justify-center mb-3">
-          <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
-        </div>
-        <h1 class="text-center text-4xl font-extrabold tracking-wide mb-28">Tokoh Penting</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-14 md:gap-y-20" data-aos="fade-up">
-          <div class="tokoh-card">
-            <div class="image rounded-xl">
-              <img href="#" src="./assets/img/kihajardewantara.jpg">
-            </div>
-            <div class="content">
-              <h3 class="font-bold">Ki Hajar Dewantara</h3>
-              <p>Bangsawan Jawa, pelopor pendidikan dan guru bangsa bagi kaum pribumi di Indonesia. Sekaligus juga pendiri Taman Siswa</p>
-            </div>
-          </div>
-          <div class="tokoh-card">
-            <div class="image rounded-xl">
-              <img href="#" src="./assets/img/sutomo.jpg">
-            </div>
-            <div class="content">
-              <h3 class="font-bold">R.M. Sutomo</h3>
-              <p>Termasuk dalam salah satu pendiri pertama Taman Siswa. Slogan beliau yang terkenal "Belajar adalah harta karun yang akan selalu mengikuti pemiliknya kemanapun juga</p>
-            </div>
-          </div>
-          <div class="tokoh-card">
-            <div class="image rounded-xl">
-              <img href="#" src="./assets/img/martanihuseini.jpg">
-            </div>
-            <div class="content">
-              <h3 class="font-bold">Prof. Dr. Martani Huseini</h3>
-              <p>Lulusan sarjana hingga doktoral di Universitas Indonesia dalam bidang yang linear yaitu Administrasi Publik. Saat ini menjabat sebagai Direktur POLITAMA</p>
-            </div>
-          </div>
-          <div class="tokoh-card">
-            <div class="image rounded-xl">
-              <img href="#" src="./assets/img/kisunariadi.jpg">
-            </div>
-            <div class="content">
-              <h3 class="font-bold">Ki Sunariadi, S, Pd. MM</h3>
-              <p>Saat ini menjabat sebagai salah satu wakil direktur di POLITAMA yaitu Wakil Direktur Akademi</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="visi-misi" class="py-10 h-full overflow-hidden">
-      <div class="flex justify-center mb-3">
-        <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
-      </div>
-      <h1 class="text-center text-4xl font-extrabold tracking-wide mb-10">Visi & Misi</h1>
-      <div class="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-6 gap-x-7 container mx-auto">
-    <div class="box-vimi h-full" data-aos="fade-right">
-      <div class="icon"><img src="./assets/img/svg/visi.svg" alt=""></div>
-      <div class="content">
-        <h3 class="font-extrabold text-xl">Visi</h3>
-        <p>” Menjadi Pusat Pendidikan Dan Pengembangan Vokasi Yang Menghasilkan Tenaga Ahli Yang Berdaya Saing Secara Internasional “</p>
-      </div>
-    </div>
-    <div class="box-vimi group h-full" data-aos="fade-left">
-      <div class="icon"><img src="./assets/img/svg/misi.svg" alt=""></div>
-      <div class="content">
-        <h3 class="font-extrabold text-xl">Misi</h3>
-        <ul class="list-disc group-hover:text-white">
-          <li>Meningkatkan Kualitas Sumber Daya Yang Berpengetahuan , Berkeahlian, Dan Berbudaya</li>
-          <li>Meningkatkan Sinergi Setiap Program Studi Dengan Kebutuhan Lapangan Kerja</li>
-          <li>Meningkatkan Kegiatan Layanan Pada Setiap Program Studi Yang Bermanfaat Bagi Masyarakat</li>
-          <li>Bersinergi Dengan Program Pemerintah / Daerah</li>
-          <li>Meningkatkan Penguatan Kerjasama Dalam Mendukung Keberlanjutan  Pemanfaatan Sumber Daya Manusia Terampil</li>
-          <li>Mewujudkan Tata Kelola Perguruan Tinggi Yang Baik</li>
-        </ul>
-      </div>
-    </div>
-      </div>
-    </section>
-    <footer id="footer" class="bg-black text-white">
-      <div class="lg:flex lg:items-center block container mx-auto">
-        <div class="informasi-umum lg:w-1/2 p-10 relative">
-          <h1 class="text-5xl title-footer relative text-lime-600 font-black">Politama</h1>
-          <p class="mt-10">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik dan bisnis.</p>
-          <div class="address">
-            <div class="mt-5 mb-2"><i class="fas fa-location-dot mr-3 text-lime-500"></i>Jalan Tamansiswa N0. 30 Kota Mojokerto Jawa Timur 61311</div>
-            <div class="mb-2"><i class="fas fa-envelope mr-3 text-lime-500"></i>info@politekniktamansiswa-mjk.ac.id</div>
-            <div class="mb-2"><i class="fas fa-phone mr-3 text-lime-500"></i>032 1322 937</div>
-          </div>
-        </div>
-        <div class="map-politama lg:w-1/2 p-10">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.992193814054!2d112.4388628!3d-7.4654652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d8d3b31db45%3A0xdeec8da4b0616663!2sPoliteknik%20Internasional%20Tamansiswa%20Mojokerto!5e0!3m2!1sid!2sid!4v1675221638579!5m2!1sid!2sid" style="border:0;" class="mt-6 h-80 w-full lg:w-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-      <div class="container pt-9 mx-auto">
-        <div class="flex justify-center mb-9">
-          <a href="#" class="mr-9 text-white">
-           <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" class="mr-9 text-white">
-            <i class="fa-brands fa-facebook"></i>
-           </a>
-           <a href="#" class="mr-9 text-white">
-            <i class="fa-brands fa-twitter"></i>
-           </a>
-        </div>
-      </div>
-      <div class="text-center bg-slate-800 p-3">
-        Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All Rights Reserved 
-      </div>
-    </footer>
-    <script src="./assets/js/script.js"></script>
-    <script src="./icon/fontawesome/js/all.min.js"></script>
-    <script src="./assets/libs/typed/typed.js"></script>
-    <script src="./assets/libs/aos/aos.js"></script>
-    <script src="./assets/libs/slider/js/swiper-bundle.min.js"></script>
-    <!-- Typed banner -->
-    <script>
-      const typed = new Typed('.typing-text', {
-        strings: ['Sukses', 'Maju', 'Cerdas'],
-        typeSpeed: 300,
-        backSpeed: 300,
-        loop: true,
-      });
-    </script>
-    <!-- AOS scroll animation  -->
-    <script>
-      AOS.init();
-      AOS.init({
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: 'aos-init', // class applied after initialization
-        animatedClassName: 'aos-animate', // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-        throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 120, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 400, // values from 0 to 3000, with step 50ms
-        easing: 'ease', // default easing for AOS animations
-        once: false, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-      });
-    </script>
-    <!-- Slider Swiper -->
-    <script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POLITAMA | Homepage</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/tailwind.css" />
+  <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
+  <link rel="stylesheet" href="./assets/libs/slider/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/slider.css">
+</head>
+
+<body class="font-poppins body-flex">
+  <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
+    <span class="loader lg:scale-150"></span>
+  </div>
+  <input type="text" class="absolute -z-50" autofocus />
+  <div class="bg-lime-500 hidden lg:block" id="announce">
+    <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+      <div class="flex flex-wrap items-center justify-between">
+        <div class="flex w-0 flex-1 items-center">
+          <span class="flex rounded-lg bg-lime-500 p-2">
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+            </svg>
+          </span>
+          <p class="ml-3 truncate font-medium text-white">
+            <span class="md:hidden">Pengumuman!</span>
+            <span class="hidden md:inline">Pendaftaran telah dibuka, silahkan cek lebih lanjut.</span>
+          </p>
+        </div>
+        <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+          <button type="button" id="announce-button"
+            class="-mr-1 flex rounded-md p-2 hover:bg-white hover:rounded-full transition hover:text-lime-500 group focus:outline-none focus:ring-2 sm:-mr-2">
+            <span class="sr-only">Dismiss</span>
+            <svg class="h-6 w-6 text-white group-hover:text-lime-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header
+    class="sticky top-0 left-0 transition z-40 w-full flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
+    <div class="w-full relative">
+      <div class="relative flex justify-between items-center py-2 px-5">
+        <div class="px-8">
+          <a href="./index.html"><img src="./assets/img/politama-logo.png" width="55" height="55" class="block"
+              alt="" /></a>
+        </div>
+        <div class="flex items-center">
+          <button class="absolute block right-5 nav-button z-50 px-8 group lg:hidden" title="Navbar">
+            <span class="nav-toggle transition duration-300 origin-top-left"></span>
+            <span class="nav-toggle transition duration-300"></span>
+            <span class="nav-toggle transition duration-300 origin-bottom-left"></span>
+          </button>
+          <nav
+            class="absolute top-full left-0 w-full h-screen hidden transition bg-white lg:bg-transparent z-40 lg:static lg:block lg:w-full lg:h-full">
+            <ul
+              class="text-lg font-normal lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-wider text-gray-900">
+              <li class="nav-item"><a href="./index.html" class="hover-navbar active">HOME</a></li>
+              <li class="nav-item"><a href="./blog.html" class="hover-navbar">BERITA</a></li>
+              <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
+              <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
+              <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
+                <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
+                <div class="search-button">
+                  <i class="fas fa-search text-white"></i>
+                </div>
+                <div
+                  class="cancel-button relative cursor-pointer rounded-full hidden justify-center items-center lg:-right-4 -right-4">
+                  <i class="fas fa-times absolute"></i>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section
+    class="pt-10 pb-52 max-h-screen bg-center overflow-hidden bg-slate-600/80 transition bg-fixed bg-cover bg-blend-darken"
+    style="background-image: url(./assets/img/gedung.jpg)">
+    <div class="text-center container mx-auto mt-12">
+      <div data-aos="fade-right" data-aos-delay="550">
+        <h2 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white"><span
+            class="typing-text font-montserrat"></span>Bersama</h2>
+        <h1 class="text-5xl md:text-7xl lg:text-8xl front-text-banner font-black mb-10 font-montserrat">
+          POLITAMA</h1>
+      </div>
+      <p class="text-white mb-10 px-7 text-lg lg:px-32 lg:text-xl" data-aos="fade-left" data-aos-delay="550">
+        POLITAMA adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan pelatihan dalam bidang teknik
+        dan bisnis.
+      </p>
+      <a href="#sejarah" class="text-white bg-lime-500 py-3 px-4 rounded-full inline-block hover:bg-lime-600">
+        <h2>Lihat Selengkapnya</h2>
+      </a>
+    </div>
+  </section>
+  <section id="sejarah" class="h-full relative w-full p-2 pt-20 pb-6 bg-cover bg-right-bottom">
+    <div class="flex justify-center mb-3">
+      <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
+    </div>
+    <h1 class="text-center text-4xl font-extrabold tracking-wider mb-9">Sejarah Tamansiswa</h1>
+    <div class="blog-slider" id="historical-card" data-aos="fade-up">
+      <div class="blog-slider__wrp swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img">
+            <img src="./assets/img/banner.jpg" alt="" />
+          </div>
+          <div class="blog-slider__content">
+            <!-- <div class="blog-slider__title">Lorem Ipsum Dolor</div> -->
+            <div class="blog-slider__text">Taman Siswa adalah sebuah organisasi pendidikan yang didirikan oleh Suwardi
+              Suryaningrat atau Ki Hadjar Dewantara. Taman Siswa berdiri pada 3 Juli 1922 di kota Yogyakarta. Taman
+              Siswa selalu menekankan prinsip nasionalisme dan kemerdekaan dalam pelaksanaan pendidikannya. Taman Siswa
+              juga bersikap non-kooperatif terhadap pemerintah kolonial Belanda.</div>
+            <a href="./about.html" class="blog-slider__button bg-gradient-to-bl from-lime-500 to-lime-600 hover:to-lime-500
+               transition">SELENGKAPNYA</a>
+          </div>
+        </div>
+      </div>
+      <div class="blog-slider__pagination" id="paginate-historical"></div>
+    </div>
+    </div>
+  </section>
+  <section class="h-full w-full bg-cover bg-center p-10 md:pt-24" id="tokoh-penting">
+    <div class="container mx-auto">
+      <div class="flex justify-center mb-3">
+        <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
+      </div>
+      <h1 class="text-center text-4xl font-extrabold tracking-wide mb-28">Tokoh Penting</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center gap-14 md:gap-y-20"
+        data-aos="fade-up">
+        <div class="tokoh-card">
+          <div class="image rounded-xl">
+            <img href="#" src="./assets/img/kihajardewantara.jpg">
+          </div>
+          <div class="content">
+            <h3 class="font-bold">Ki Hajar Dewantara</h3>
+            <p>Bangsawan Jawa, pelopor pendidikan dan guru bangsa bagi kaum pribumi di Indonesia. Sekaligus juga pendiri
+              Taman Siswa</p>
+          </div>
+        </div>
+        <div class="tokoh-card">
+          <div class="image rounded-xl">
+            <img href="#" src="./assets/img/sutomo.jpg">
+          </div>
+          <div class="content">
+            <h3 class="font-bold">R.M. Sutomo</h3>
+            <p>Termasuk dalam salah satu pendiri pertama Taman Siswa. Slogan beliau yang terkenal "Belajar adalah harta
+              karun yang akan selalu mengikuti pemiliknya kemanapun juga</p>
+          </div>
+        </div>
+        <div class="tokoh-card">
+          <div class="image rounded-xl">
+            <img href="#" src="./assets/img/martanihuseini.jpg">
+          </div>
+          <div class="content">
+            <h3 class="font-bold">Prof. Dr. Martani Huseini</h3>
+            <p>Lulusan sarjana hingga doktoral di Universitas Indonesia dalam bidang yang linear yaitu Administrasi
+              Publik. Saat ini menjabat sebagai Direktur POLITAMA</p>
+          </div>
+        </div>
+        <div class="tokoh-card">
+          <div class="image rounded-xl">
+            <img href="#" src="./assets/img/kisunariadi.jpg">
+          </div>
+          <div class="content">
+            <h3 class="font-bold">Ki Sunariadi, S, Pd. MM</h3>
+            <p>Saat ini menjabat sebagai salah satu wakil direktur di POLITAMA yaitu Wakil Direktur Akademi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="visi-misi" class="py-10 h-full overflow-hidden">
+    <div class="flex justify-center mb-3">
+      <p class="text-lime-500 text-xl font-latin p-3 px-5 tracking-wider">Kenalilah Kami</p>
+    </div>
+    <h1 class="text-center text-4xl font-extrabold tracking-wide mb-10">Visi & Misi</h1>
+    <div class="relative grid grid-cols-1 md:grid-cols-2 place-items-center gap-y-6 gap-x-7 container mx-auto">
+      <div class="box-vimi h-full" data-aos="fade-right">
+        <div class="icon"><img src="./assets/img/svg/visi.svg" alt=""></div>
+        <div class="content">
+          <h3 class="font-extrabold text-xl">Visi</h3>
+          <p>” Menjadi Pusat Pendidikan Dan Pengembangan Vokasi Yang Menghasilkan Tenaga Ahli Yang Berdaya Saing Secara
+            Internasional “</p>
+        </div>
+      </div>
+      <div class="box-vimi group h-full" data-aos="fade-left">
+        <div class="icon"><img src="./assets/img/svg/misi.svg" alt=""></div>
+        <div class="content">
+          <h3 class="font-extrabold text-xl">Misi</h3>
+          <ul class="list-disc group-hover:text-white">
+            <li>Meningkatkan Kualitas Sumber Daya Yang Berpengetahuan , Berkeahlian, Dan Berbudaya</li>
+            <li>Meningkatkan Sinergi Setiap Program Studi Dengan Kebutuhan Lapangan Kerja</li>
+            <li>Meningkatkan Kegiatan Layanan Pada Setiap Program Studi Yang Bermanfaat Bagi Masyarakat</li>
+            <li>Bersinergi Dengan Program Pemerintah / Daerah</li>
+            <li>Meningkatkan Penguatan Kerjasama Dalam Mendukung Keberlanjutan Pemanfaatan Sumber Daya Manusia Terampil
+            </li>
+            <li>Mewujudkan Tata Kelola Perguruan Tinggi Yang Baik</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer id="footer" class="bg-black text-white">
+    <div class="lg:flex lg:items-center block container mx-auto">
+      <div class="informasi-umum lg:w-1/2 p-10 relative">
+        <h1 class="text-5xl title-footer relative text-lime-600 font-black">Politama</h1>
+        <p class="mt-10">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan pendidikan dan
+          pelatihan dalam bidang teknik dan bisnis.</p>
+        <div class="address">
+          <div class="mt-5 mb-2"><i class="fas fa-location-dot mr-3 text-lime-500"></i>Jalan Tamansiswa N0. 30 Kota
+            Mojokerto Jawa Timur 61311</div>
+          <div class="mb-2"><i class="fas fa-envelope mr-3 text-lime-500"></i>info@politekniktamansiswa-mjk.ac.id</div>
+          <div class="mb-2"><i class="fas fa-phone mr-3 text-lime-500"></i>032 1322 937</div>
+        </div>
+      </div>
+      <div class="map-politama lg:w-1/2 p-10">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.992193814054!2d112.4388628!3d-7.4654652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d8d3b31db45%3A0xdeec8da4b0616663!2sPoliteknik%20Internasional%20Tamansiswa%20Mojokerto!5e0!3m2!1sid!2sid!4v1675221638579!5m2!1sid!2sid"
+          style="border:0;" class="mt-6 h-80 w-full lg:w-full" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="container pt-9 mx-auto">
+      <div class="flex justify-center mb-9">
+        <a href="#" class="mr-9 text-white">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="mr-9 text-white">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+        <a href="#" class="mr-9 text-white">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <div class="text-center bg-lime-700 p-3">
+      Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All Rights
+      Reserved
+    </div>
+  </footer>
+  <script src="./assets/js/script.js"></script>
+  <script src="./icon/fontawesome/js/all.min.js"></script>
+  <script src="./assets/libs/typed/typed.js"></script>
+  <script src="./assets/libs/aos/aos.js"></script>
+  <script src="./assets/libs/slider/js/swiper-bundle.min.js"></script>
+  <!-- Typed banner -->
+  <script>
+    const typed = new Typed('.typing-text', {
+      strings: ['Sukses', 'Maju', 'Cerdas'],
+      typeSpeed: 300,
+      backSpeed: 300,
+      loop: true,
+    });
+  </script>
+  <!-- AOS scroll animation  -->
+  <script>
+    AOS.init();
+    AOS.init({
+      // Global settings:
+      disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+      startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: 'aos-init', // class applied after initialization
+      animatedClassName: 'aos-animate', // class applied on animation
+      useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+      // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+      offset: 120, // offset (in px) from the original trigger point
+      delay: 0, // values from 0 to 3000, with step 50ms
+      duration: 400, // values from 0 to 3000, with step 50ms
+      easing: 'ease', // default easing for AOS animations
+      once: false, // whether animation should happen only once - while scrolling down
+      mirror: false, // whether elements should animate out while scrolling past them
+      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    });
+  </script>
+  <!-- Slider Swiper -->
+  <script>
     let historical = new Swiper('#historical-card', {
       spaceBetween: 30,
       effect: 'fade',
@@ -274,6 +306,7 @@
         clickable: true,
       }
     });
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

@@ -174,7 +174,6 @@
 }
 .blog-slider__button {
   display: inline-flex;
-  background-image: linear-gradient(147deg, #39fe3f 0%, #31b20d 74%);
   padding: 15px 35px;
   border-radius: 50px;
   color: #fff;
@@ -184,6 +183,7 @@
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
 }
 @media screen and (max-width: 576px) {
   .blog-slider__button {

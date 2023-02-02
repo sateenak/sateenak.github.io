@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POLITAMA | Berita Terkini</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/tailwind.css" />
+    <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
+</head>
+
+<body class="font-poppins body-flex">
+    <div class="block-load fixed top-0 bottom-0 left-0 right-0 bg-white z-[999] flex justify-center items-center">
+        <span class="loader lg:scale-150"></span>
+    </div>
+    <input type="text" class="absolute -z-50" autofocus />
+    <div class="bg-lime-500 hidden lg:block" id="announce">
+        <div class="mx-auto max-w-7xl py-3 px-3 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between">
+                <div class="flex w-0 flex-1 items-center">
+                    <span class="flex rounded-lg bg-lime-500 p-2">
+                        <!-- Heroicon name: outline/megaphone -->
+                        <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 110-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 01-1.44-4.282m3.102.069a18.03 18.03 0 01-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 018.835 2.535M10.34 6.66a23.847 23.847 0 008.835-2.535m0 0A23.74 23.74 0 0018.795 3m.38 1.125a23.91 23.91 0 011.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 001.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 010 3.46" />
+                        </svg>
+                    </span>
+                    <p class="ml-3 truncate font-medium text-white">
+                        <span class="md:hidden">Pengumuman!</span>
+                        <span class="hidden md:inline">Pendaftaran telah dibuka, silahkan cek lebih lanjut.</span>
+                    </p>
+                </div>
+                <div class="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                    <button type="button" id="announce-button"
+                        class="-mr-1 flex rounded-md p-2 hover:bg-white hover:rounded-full transition hover:text-lime-500 group focus:outline-none focus:ring-2 sm:-mr-2">
+                        <span class="sr-only">Dismiss</span>
+                        <!-- Heroicon name: outline/x-mark -->
+                        <svg class="h-6 w-6 text-white group-hover:text-lime-500" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header
+        class="sticky top-0 left-0 transition z-40 w-full shadow-md flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
+        <div class="w-full relative">
+            <div class="relative flex justify-between items-center py-2 px-5">
+                <div class="px-8">
+                    <a href="./index.html"><img src="./assets/img/politama-logo.png" width="55" height="55"
+                            class="block" alt="" /></a>
+                </div>
+                <div class="flex items-center">
+                    <button class="absolute block right-5 nav-button z-50 px-8 group lg:hidden" title="Navbar">
+                        <span class="nav-toggle transition duration-300 origin-top-left"></span>
+                        <span class="nav-toggle transition duration-300"></span>
+                        <span class="nav-toggle transition duration-300 origin-bottom-left"></span>
+                    </button>
+                    <nav
+                        class="absolute top-full left-0 w-full h-screen hidden transition bg-white lg:bg-transparent z-40 lg:static lg:block lg:w-full lg:h-full">
+                        <ul
+                            class="text-lg font-normal lg:flex lg:gap-7 relative lg:static right-[40rem] lg:items-center transition lg:justify-around z-40 lg:px-8 tracking-wider text-gray-900">
+                            <li class="nav-item"><a href="./index.html" class="hover-navbar">HOME</a></li>
+                            <li class="nav-item"><a href="./blog.html" class="hover-navbar active">BERITA</a></li>
+                            <li class="nav-item"><a href="./prodi.html" class="hover-navbar">PROGRAM STUDI</a></li>
+                            <li class="nav-item"><a href="#footer" class="hover-navbar">ABOUT</a></li>
+                            <li class="py-1.5 hidden lg:flex justify-center lg:relative items-center">
+                                <input type="text" placeholder="Search.." class="search-box w-10 opacity-0 none" />
+                                <div class="search-button">
+                                    <i class="fas fa-search text-white"></i>
+                                </div>
+                                <div
+                                    class="cancel-button relative cursor-pointer rounded-full hidden justify-center items-center lg:-right-4 -right-4">
+                                    <i class="fas fa-times absolute"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="h-full py-5 pt-10">
+        <div class="front-blog-area">
+            <div class='max-w-[80%] mx-auto'>
+                <form class="w-full h-[45px] flex justify-center border border-emerald-600 rounded-r-sm box-border">
+                    <i class="fas fa-search fa-lg text-[#777] self-center py-[10px] px-[20px]"></i>
+                    <input type="text" class="h-full w-9/12 lg:w-10/12 outline-none" placeholder="Ketik sesuatu...">
+                    <button class="bg-emerald-600 text-white h-full w-3/12 lg:w-2/12 rounded-r-sm">Search</button>
+                </form>
+            </div>
+        </div>
+        <section>
+            <div id="main">
+
+                <!-- Post -->
+                <article class="post">
+                    <header>
+                        <div class="title">
+                            <h2><a href="#">POLITAMA, Politeknik Internasional di Mojokerto</a></h2>
+                            <p>Siap Lahirkan Enterpreneur dan Technopreneur, Bisa kerja Sebelum Wisuda</p>
+                        </div>
+                        <div class="meta">
+                            <time class="published" datetime="2022-07-11">Juli 11, 2022</time>
+                            <a href="#" class="author"><span class="name">Headline,Pendidikan</span><img
+                                    src="images/avatar.jpg" alt="" /></a>
+                        </div>
+                    </header>
+                    <span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
+                    <p>Di Mojokero kini telah hadir, POLITAMA, Politeknik Internasional Tamansiswa dengan Program Studi
+                        D3 Teknologi Listrik, D3 Teknologi Mesin dan D3 Teknologi Komputer. Saat ini, sudah dibuka
+                        Pendaftaran Mahasiswa Baru. Juga dibuka untuk kuliah pagi dan sore.POLITAMA ada di Jl.
+                        Tamansiswa No. 30, Kota Mojokerto dan sudah memiliki kampus sendiri dengan fasilitas ruang
+                        kuliah yang nyaman, ruang praktek yang lengkap, perpustakaan, gedung olah raga dan berbagai
+                        fasilitas lainnya. Serta didukung dosen tetap linier dan kompeten.POLITAMA bekerjasama dengan
+                        BUMN, BUMD, Perusahaan Nasinal & Internasional, Penyaluran Tenaga Kerja ke Perusahaan di
+                        Inggris, Asia dan Uni Eropa, serta Penyaluran Tenaga Kerja ke Perusahaan JepangJuga menyediakan
+                        Pelatihan pengembangan SDM yang sudah bekerjasama dengan Lembaga Sertifikat Profesi Indonesia
+                        (LSPI) . Serta siap mendukung Program kerja Kota Mojokerto, yaitu Program 1 Rumah 1
+                        Sarjana.Informasi lebih lanjut terkait pendaftaran mahasiswa baru, datang langsung ke kampus
+                        POLITAMA, Jl. Tamansiswa No. 30, Kota Mojokerto, Telp. (0321) 322937..</p>
+                    <p>POLITAMA Berjiwa Enterpreneur, Technopreneur, dan bersaing di era global. Bisa kerja sebelum
+                        wisuda.(*/ADV). </p>
+                    <footer>
+                        <ul class="stats">
+                            <li><a href="#">General</a></li>
+                            <li><a href="#" class="icon solid fa-heart">0</a></li>
+                            <li><a href="#" class="icon solid fa-comment">0</a></li>
+                        </ul>
+                    </footer>
+                </article>
+
+            </div>
+        </section>
+        <footer id="footer" class="bg-black text-white">
+            <div class="lg:flex lg:items-center block container mx-auto">
+                <div class="informasi-umum lg:w-1/2 p-10 relative">
+                    <h1 class="text-5xl title-footer relative text-lime-600 font-black">Politama</h1>
+                    <p class="mt-10">POLITAMA</span> adalah institusi pendidikan tinggi vokasi yang menawarkan
+                        pendidikan dan
+                        pelatihan dalam bidang teknik dan bisnis.</p>
+                    <div class="address">
+                        <div class="mt-5 mb-2"><i class="fas fa-location-dot mr-3 text-lime-500"></i>Jalan Tamansiswa
+                            N0. 30 Kota
+                            Mojokerto Jawa Timur 61311</div>
+                        <div class="mb-2"><i
+                                class="fas fa-envelope mr-3 text-lime-500"></i>info@politekniktamansiswa-mjk.ac.id
+                        </div>
+                        <div class="mb-2"><i class="fas fa-phone mr-3 text-lime-500"></i>032 1322 937</div>
+                    </div>
+                </div>
+                <div class="map-politama lg:w-1/2 p-10">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15823.992193814054!2d112.4388628!3d-7.4654652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e780d8d3b31db45%3A0xdeec8da4b0616663!2sPoliteknik%20Internasional%20Tamansiswa%20Mojokerto!5e0!3m2!1sid!2sid!4v1675221638579!5m2!1sid!2sid"
+                        style="border:0;" class="mt-6 h-80 w-full lg:w-full" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="container pt-9 mx-auto">
+                <div class="flex justify-center mb-9">
+                    <a href="#" class="mr-9 text-white">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="mr-9 text-white">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" class="mr-9 text-white">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center bg-lime-700 p-3">
+                Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All
+                Rights
+                Reserved
+            </div>
+        </footer>
+        <script src="./assets/js/script.js"></script>
+        <script src="./icon/fontawesome/js/all.min.js"></script>
+        <script src="./assets/libs/typed/typed.js"></script>
+        <script src="./assets/libs/aos/aos.js"></script>
+        <script>
+            const typed = new Typed('.typing-text', {
+                strings: ['Sukses', 'Maju', 'Cerdas'],
+                typeSpeed: 300,
+                backSpeed: 300,
+                loop: true,
+            });
+        </script>
+</body>
+
+</html>
