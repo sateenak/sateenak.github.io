@@ -5,6 +5,8 @@ module.exports = {
     fontFamily: {
       poppins: ['Poppins'],
       latin: ['Kaushan Script'],
+      itim: ['Itim'],
+      opensans: ['Open Sans'],
     },
     extend: {
       animation: {

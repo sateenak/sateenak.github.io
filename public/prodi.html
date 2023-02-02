@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>POLITAMA | Program Studi</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
     <link rel="stylesheet" href="./icon/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="./assets/libs/aos/aos.css" />
@@ -49,7 +50,7 @@
         </div>
       </div>
     </div>
-    <header class="sticky top-0 left-0 transition z-40 w-full border-b flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
+    <header class="sticky top-0 left-0 transition z-40 w-full flex items-center bg-white/95 lg:bg-white/95 backdrop-blur-lg">
       <div class="w-full relative">
         <div class="relative flex justify-between items-center py-2 px-5">
           <div class="px-8">
@@ -82,12 +83,23 @@
         </div>
       </div>
     </header>
-
-    <section class="min-h-screen py-6 px-5">
+    <section class="pt-10 h-full max-h-screen bg-center overflow-hidden font-poppins">
+      <div class="text-left flex flex-col-reverse lg:flex-row w-full h-full container mx-auto">
+        <div class="w-full lg:w-1/2 flex gap-2 items-center justify-center flex-col">
+          <h1 class="md:text-5xl text-xl">Daftar Prodi di POLITAMA</h1>
+          <p>Ada bebagai jenis program studi di Politama</p>
+          <a href="#prodi" class="text-white text-lg inline-block px-5 py-3 bg-sky-500 rounded-full mt-5 hover:bg-sky-600"><h2>Baca Selengkapnya</h2></a>
+        </div>
+        <div class="bg-cover lg:w-1/2 bg-center w-full h-[400px]" style="background-image: url(./assets/img/prodi-banner.jpg);">
+          <!--  -->
+        </div>
+      </div>
+    </section>
+    <section class="min-h-screen py-5 pt-20 px-5" id="prodi">
       <div class="container mx-auto flex md:justify-center justify-center lg:justify-around flex-wrap px-4 gap-y-5">
         <div class="card-prodi">
           <div class="img-box" data-text="Listrik">
-            <img src="./assets/img/prodi/electric.png" class="w-32 h-32" alt="">
+            <img src="./assets/img/prodi/electric.png" class="md:w-56 md:h-56 w-36 h-36" alt="">
           </div>
           <div class="content">
             <div>
@@ -106,7 +118,7 @@
         </div>
         <div class="card-prodi">
           <div class="img-box" data-text="Mesin">
-            <img src="./assets/img/prodi/machine.png" class="w-32 h-32" alt="">
+            <img src="./assets/img/prodi/machine.png" class="md:w-56 md:h-56 w-36 h-36" alt="">
           </div>
           <div class="content">
            <div>
@@ -123,7 +135,7 @@
         </div>
         <div class="card-prodi">
           <div class="img-box" data-text="Komputer">
-            <img src="./assets/img/prodi/computer.png" class="w-32 h-32" alt="">
+            <img src="./assets/img/prodi/computer.png" class="md:w-56 md:h-56 w-36 h-36" alt="">
           </div>
           <div class="content">
            <div>
@@ -174,9 +186,7 @@
         Copyright &copy; <a href="https://politekniktamansiswa-mjk.ac.id/"> 2023 politekniktamansiswa</a>. All Rights Reserved 
       </div>
     </footer>
-
     <!-- Modal Prodi -->
-    
     <!-- </Modal Prodi> -->
     <script src="./assets/js/script.js"></script>
     <script src="./icon/fontawesome/js/all.min.js"></script>
@@ -224,7 +234,7 @@
                     </ul>
                   </div>
                   </div>
-                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                  <div class="block md:grid md:grid-cols-1 gap-10 lg:grid-cols-2 mb-10">
                     <div class="h-full rounded-lg shadow-lg p-4 bg-yellow-500 text-white mb-10">
                       <h1 class="text-xl font-semibold">Visi:</h1>
                       <p>Menjadi program studi yang menghasilkan tenaga ahli di bidang ketenagalistrikan yang unggul dan inovatif serta mampu mengembangkan ilmu pengetahuan dan teknologi yang berbasis riset terapan</p>
@@ -240,6 +250,15 @@
                           berbasis riset terapan.</li>
                       </ul>
                     </div>
+                  </div>
+                  <div>
+                    <h1 class="text-2xl text-center mb-4">Gambar Jurusan</h1>
+                    <div class="grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/listrik/gambar1.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/listrik/gambar2.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/listrik/gambar3.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/listrik/gambar4.jpg);"></div>
+                  </div>
                   </div>
                 </div>`,
           confirmButtonText: 'Tutup',
@@ -259,7 +278,7 @@
                     </ul>
                   </div>
                   </div>
-                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                  <div class="block md:grid md:grid-cols-1 gap-10 lg:grid-cols-2 mb-10">
                     <div class="h-full rounded-lg shadow-lg p-4 bg-sky-500 text-white mb-10">
                       <h1 class="text-xl font-semibold">Visi:</h1>
                       <p>Mewujudkan Program Studi D-III Teknik Mesin yang mampu bersaing, inovatif dan 
@@ -279,6 +298,15 @@
                       </ul>
                     </div>
                   </div>
+                  <div>
+                    <h1 class="text-2xl text-center mb-4">Gambar Jurusan</h1>
+                    <div class="grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/mesin/gambar1.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/mesin/gambar2.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/mesin/gambar3.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/mesin/gambar4.jpg);"></div>
+                  </div>
+                  </div>
                 </div>`,
           confirmButtonText: 'Tutup',
           grow:'fullscreen'
@@ -297,7 +325,7 @@
                     </ul>
                   </div>
                   </div>
-                  <div class="block md:grid md:grid-cols1 gap-10 lg:grid-cols-2 mb-10">
+                  <div class="block md:grid md:grid-cols-1 gap-10 lg:grid-cols-2 mb-10">
                     <div class="h-full rounded-lg shadow-lg p-4 bg-pink-600 text-white mb-10">
                       <h1 class="text-xl font-semibold">Visi:</h1>
                       <p>Menjadi program studi yang unggul, inovatif, berwawasan global, bereputasi 
@@ -316,6 +344,15 @@
                           teknologi masa depan di bidang teknologi komputer.</li>
                       </ul>
                     </div>
+                  </div>
+                  <div>
+                    <h1 class="text-2xl text-center mb-4">Gambar Jurusan</h1>
+                    <div class="grid place-items-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/komputer/gambar1.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/komputer/gambar2.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/komputer/gambar3.jpg);"></div>
+                      <div class="bg-center bg-cover h-64 w-72 rounded-lg" style="background-image: url(./assets/img/prodi/komputer/gambar4.jpg);"></div>
+                  </div>
                   </div>
                 </div>`,
           confirmButtonText: 'Tutup',
