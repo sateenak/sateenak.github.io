@@ -332,7 +332,7 @@ nav ul li a:hover::before {
 }
 .content .title-news::before {
   content: '';
-  @apply w-full lg:scale-x-[0.2] h-2 bg-emerald-400 absolute -bottom-3 left-0 origin-left group-hover:scale-x-100 transition;
+  @apply w-full lg:scale-x-[0.25] h-2 bg-emerald-400 absolute -bottom-3 left-0 origin-left transition;
 }
 .card {
   align-self: flex-start;
@@ -386,7 +386,7 @@ nav ul li a:hover::before {
   color: #fff;
 }
 .card .card-info .card-about .card-tag.tag-news {
-  background: #36b37e;
+  @apply bg-pink-600;
 }
 .card .card-info .card-about .card-tag.tag-deals {
   background: #ffab00;
@@ -413,6 +413,7 @@ nav ul li a:hover::before {
 .card:hover .card-img-hovered {
   --card-img-hovered-overlay: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.65));
   height: 100%;
+  @apply bg-gray-900/20 bg-blend-darken;
 }
 .card:hover .card-about,
 .card:hover .card-creator {
@@ -425,65 +426,5 @@ nav ul li a:hover::before {
   color: #ebecf0;
   transform: translate(0, 40px);
 }
-.card-1 .card-img,
-.card-1 .card-img-hovered {
-  background-image: var(--card-img-hovered-overlay), url(https://source.unsplash.com/Qm_n6aoYzDs);
-}
 
 /* Animation for card full background */
-.go-corner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  background-color: #00838d;
-  border-radius: 0 4px 0 32px;
-}
-.go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
-  color: white;
-  font-family: courier, sans;
-}
-.card1 {
-  display: block;
-  position: relative;
-  max-width: 262px;
-  background-color: #f2f8f9;
-  border-radius: 4px;
-  padding: 32px 24px;
-  margin: 12px;
-  text-decoration: none;
-  z-index: 0;
-  overflow: hidden;
-}
-.card1:before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: -16px;
-  right: -16px;
-  background: #00838d;
-  height: 32px;
-  width: 32px;
-  border-radius: 32px;
-  transform: scale(1);
-  transform-origin: 50% 50%;
-  transition: transform 0.25s ease-out;
-}
-.card1:hover:before {
-  transform: scale(21);
-}
-.card1:hover p {
-  transition: all 0.3s ease-out;
-  color: rgba(255, 255, 255, 0.8);
-}
-.card1:hover h3 {
-  transition: all 0.3s ease-out;
-  color: #fff;
-}
